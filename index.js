@@ -24,5 +24,10 @@ $('#js-shopping-list-form').submit(function(event) {
 });
 
 //add event listener to toggle strikethrough item when "check" button is clicked
-
+$('.shopping-list').on('click', '.shopping-item-toggle', function(){
+  $(this).closest('li').children('.shopping-item').toggleClass('shopping-item__checked');
+});
 //add event listener to delete item's div when "delete" button is clicked
+$('.shopping-list').on('click', '.shopping-item-delete', function(){
+  $(this).closest('li').remove();
+});
